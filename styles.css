@@ -1,0 +1,136 @@
+:root{
+    --primary-color: rgb(84, 171, 247);
+    --secondary-color: rgb(146, 204, 255);
+}
+
+@font-face {
+    font-family: myFont;
+    src: url(resources/Poppins-Medium.ttf);
+}
+  
+html,body{
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1.5fr 9fr 0.5fr;
+    font-family: myFont;
+}
+
+header,footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+
+header{
+    font-size: 44px;
+}
+
+.foot {
+    font-style: italic;
+    margin-right: 5px;
+}
+
+.main{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell{
+    height: 85px;
+    width: 85px;
+    border: 2px solid;
+    box-shadow: 0 0 0 2px;
+    line-height: 75px;
+    font-size: 60px;
+    font-family: "Permanent Marker", cursive;
+    cursor: pointer;
+    text-align: center;
+}
+.game_board{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+form {
+    display: grid;
+    grid-template-columns: auto;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    margin-bottom: 20px;
+    border: 3px solid var(--secondary-color);
+    border-radius: 15px;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    
+}
+
+form>p{
+    text-align: center;
+}
+
+form>div{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+form>div>button,form>button{
+    align-items: center;
+    appearance: none;
+    background-color: var(--secondary-color);
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+    font-size: 20px;
+}
+
+.border_active {
+    border: 2px solid var(--primary-color);
+}
+
+.selected {
+    border: 2px solid var(--primary-color);
+}
+
+
