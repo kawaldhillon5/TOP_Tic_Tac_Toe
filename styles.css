@@ -1,6 +1,7 @@
 :root{
     --primary-color: rgb(84, 171, 247);
     --secondary-color: rgb(146, 204, 255);
+    --winner-color: rgb(247, 125, 84);
 }
 
 @font-face {
@@ -49,8 +50,8 @@ header{
 .cell{
     height: 85px;
     width: 85px;
-    border: 2px solid;
-    box-shadow: 0 0 0 2px;
+    border: 2px solid black;
+    box-shadow: 0 0 0 2px black;
     line-height: 75px;
     font-size: 60px;
     font-family: "Permanent Marker", cursive;
@@ -60,6 +61,7 @@ header{
 .game_board{
     display: grid;
     grid-template-columns: repeat(3, auto);
+    justify-content: center;
 }
 
 form {
@@ -90,7 +92,7 @@ form>div{
     margin-bottom: 30px;
 }
 
-form>div>button,form>button{
+form>div>button,form>button,.btn{
     align-items: center;
     appearance: none;
     background-color: var(--secondary-color);
@@ -145,4 +147,21 @@ form>div>button,form>button{
     100% { transform: translateX(0) }
 }
 
+.grid_top{
+    text-align: center;
+    font-size: 24px;
+}
 
+.winner{
+    font-size: 30px;
+    color: var(--winner-color);
+}
+
+.cell_highlight {
+    color: var(--winner-color);
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
